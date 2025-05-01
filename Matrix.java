@@ -58,6 +58,30 @@ class Matrix{
 			System.out.print("\n");
 		}
 	}
+	void displayMatrix(){
+		System.out.println("Matrix : ");
+		for(float r[]: mat){
+			for(float c: r)
+				System.out.print(c+" ");
+			System.out.print("\n");
+		}
+	}
+	float maximum_of_array(){
+		float max = mat[0][0];
+		for(float r[]: mat){
+			for(float c: r)
+				max = (c > max)?c:max;
+		}	
+		return max;
+	}
+	float average_of_array(){
+		float av = 0;
+		for(float r[]: mat){
+			for(float c: r)
+				av += c;
+		}
+		return (av / (row * column));
+	}
 	public static void main(String... args){
 		Matrix mt1 = new Matrix(); // default size 3x3
 		Matrix mt2 = new Matrix(2,4);
