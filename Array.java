@@ -71,6 +71,18 @@ class Array{
 		int da[] = {1,4,12,65,12,56,89};
 		Array ar3 = new Array(da);
 
+		System.out.print("\nSize of default array : " + ar.size());
+		System.out.print("\nSize of custom array : " + ar2.size());
+
+		System.out.print("\n\nArray elements : ");
+		ar3.display();
+
+		ar3.Reverse_an_array();
+
+		System.out.print("\n\nAverage : " + ar3.Average_of_Array());
+		System.out.print("\nMaximum : " + ar3.Maximum_of_Array());
+		System.out.print("\n12 is located at " + ar3.search(12));
+		System.out.print("\nSorted array : ");
 		ar3.display();
 	}
 }
