@@ -16,6 +16,11 @@ class BankAccount{
         de_name = sc.nextLine();
         acc_type = sc.next();
     }
+    void Deposit(){
+        System.out.println("Enter amount to be deposited : ");
+        double b = sc.nextDouble();
+        balance += b;
+    }
     void BalanceInquiry(){
         System.out.println("\nTotal balance of " + de_name + " having " + acc_type+
             "account with Account number " + acc_no + " = " + balance);
