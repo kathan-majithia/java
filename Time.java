@@ -6,6 +6,25 @@ class Time{
         this.minute = minute;
         this.second = second;
     }
+    static Time timeSum(Time t1,Time t2){
+        Time ans = new Time(0,0,0);
+        int min = 0,ho = 0;
+        int sec = t1.second + t2.second;
+        if (sec > 60){
+            sec -= 60;
+            min++;
+        }
+        min += t1.minute + t2.minute;
+        if(min > 60){
+            min -= 60;
+            ho++;
+        }
+        ho += t1.hour + t2.hour;
+        ans.hour = ho;
+        ans.minute = min;
+        ans.second = sec;
+        return ans;
+    }
     void display(){
         System.out.println("\nTime is " + hour+ ":"+minute+":"+second);
     }
