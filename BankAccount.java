@@ -21,6 +21,14 @@ class BankAccount{
         double b = sc.nextDouble();
         balance += b;
     }
+    void withdraw(){
+        System.out.println("Enter amount to be withdrawn : ");
+        double b = sc.nextDouble();
+        if (b > balance)
+            System.out.println("Not enough balance...");
+        else
+            balance -= b;
+    }
     void BalanceInquiry(){
         System.out.println("\nTotal balance of " + de_name + " having " + acc_type+
             "account with Account number " + acc_no + " = " + balance);
