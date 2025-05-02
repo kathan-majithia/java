@@ -7,7 +7,15 @@ class BankAccount{
     Scanner sc = new Scanner(System.in);
 
     BankAccount(){}
-    
+    BankAccount(int s) {
+        balance = 10000;
+        acc_no = s;
+    }
+    void createAcc(){
+        System.out.println("Enter Depositer's name and Account type (Savings or current) : ");
+        de_name = sc.nextLine();
+        acc_type = sc.next();
+    }
     void BalanceInquiry(){
         System.out.println("\nTotal balance of " + de_name + " having " + acc_type+
             "account with Account number " + acc_no + " = " + balance);
