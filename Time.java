@@ -6,6 +6,9 @@ class Time{
         this.minute = minute;
         this.second = second;
     }
+    void display(){
+        System.out.println("\nTime is " + hour+ ":"+minute+":"+second);
+    }
 
     public static void main(String... args) {
         Time t1 = new Time(5,23,49);
