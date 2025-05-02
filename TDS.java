@@ -13,6 +13,12 @@ class TDS{
         if (gross_sal > 100000)
             tax = (gross_sal - 100000) * 0.1;
     }
+    void display(){
+        System.out.println("Name : "+ name + "\nBasic yearly salary : "+basic_sal);
+        System.out.println("Dearness allowance : " + dearness_allowance);
+        System.out.println("Tax deducted on gross salary : " + (tax));
+        System.out.println("Net Salary : " + (gross_sal - tax));
+    }
     public static void main(String... args) {
         TDS per1 = new TDS("Nisarg",95000,30000);
         TDS per2 = new TDS("Harsh",45000,12000);
