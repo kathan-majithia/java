@@ -15,6 +15,33 @@ abstract class Cipher {
     abstract String Decryption();
 }
 
+class Substitution_Cipher extends Cipher {
+    String ori = "abcdefghijklmnopqrstuvwxyz";
+    String cip = "qazwsxedcrfvtgbyhnujmikolp";
+
+    Substitution_Cipher(String p, int k) {
+        super(p, k);
+    }
+
+    String Encryption() {
+        String ans = "";
+        for (int i = 0; i < plainText.length(); i++)
+            ans += cip.charAt(ori.indexOf(plainText.charAt(i)));
+        plainText = ans;
+        return ans;
+    }
+
+    String Decryption() {
+        String ans = "";
+        for (int i = 0; i < plainText.length(); i++)
+            ans += ori.charAt(cip.indexOf(plainText.charAt(i)));
+        plainText = ans;
+        return ans;
+    }
+}
+
+
+
 public class P_4_2 {
     public static void main(String... args) {
         Substitution_Cipher sc = new Substitution_Cipher("kathan", 0);
