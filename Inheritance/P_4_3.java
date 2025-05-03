@@ -25,6 +25,24 @@
         "sq feet\nLand area : " + landArea+ "sq feet is Rs. " + tot);
     }
  }
+ class Flat implements Property{
+    String name;
+    double constructionArea;
+
+    Flat(String n, double ca){
+        name = n;
+        constructionArea = ca;
+    }
+    public void computePrice(){
+        double tot = 0;
+        tot += (500 * constructionArea);
+        System.out.println("\nConstruction cost : Rs." + tot);
+        System.out.println("Additional cost : Rs." + 200000);
+        tot += 200000;
+        System.out.println("Total cost for flat of "+name+
+        " having\nConstruction Area = " + constructionArea + "sq feet is Rs. " + tot);
+    }
+ }
  class P_4_3{
 
     public static void main(String... args) {
