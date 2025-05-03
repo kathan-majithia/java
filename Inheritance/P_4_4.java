@@ -8,6 +8,19 @@ interface TwoDShape extends GeometricShape {
 interface ThreeDShape extends GeometricShape {
     public double volume();
 }
+class Cone implements ThreeDShape {
+    private double radius,height;
+    public Cone (double radius, double height){
+        this.radius = radius;
+        this.height = height;
+    }
+    public double volume(){
+        return (pi * radius * radius * height / 3);
+    }
+    public void describe(){
+        System.out.println("Cone has radius : " + radius + ", height : " + height);
+    }
+}
 public class P_4_4{
     public static void main(String... args) {
         Cone c = new Cone(5.4,12);
