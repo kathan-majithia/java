@@ -21,6 +21,22 @@ class Cone implements ThreeDShape {
         System.out.println("Cone has radius : " + radius + ", height : " + height);
     }
 }
+class Rectangle implements TwoDShape {
+    private double width, height;
+    public Rectangle (double width, double height) {
+        this.height = height;
+        this.width = width;
+    }
+    public double area(){
+        return (height * width);
+    }
+    public double perimeter(){
+        return (2 * (height + width));
+    } 
+    public void describe(){
+        System.out.println("\nRectangle has Height : " + height + ", width : " + width);
+    }
+}
 public class P_4_4{
     public static void main(String... args) {
         Cone c = new Cone(5.4,12);
