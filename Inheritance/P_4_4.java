@@ -37,6 +37,18 @@ class Rectangle implements TwoDShape {
         System.out.println("\nRectangle has Height : " + height + ", width : " + width);
     }
 }
+class Sphere implements ThreeDShape {
+    private double radius;
+    public Sphere (double radius){
+        this.radius = radius;
+    }
+    public double volume(){
+        return (4 * pi * radius * radius * radius);
+    }
+    public void describe() {
+        System.out.println("\nSphere has radius : " + radius);
+    }
+}
 public class P_4_4{
     public static void main(String... args) {
         Cone c = new Cone(5.4,12);
