@@ -40,7 +40,34 @@ class Substitution_Cipher extends Cipher {
     }
 }
 
+class Caeser_Cipher extends Cipher {
 
+    Caeser_Cipher(String p, int k) {
+        super(p, k);
+    }
+
+    String Encryption() {
+        String enc = "";
+        for (int i = 0; i < plainText.length(); i++) {
+            char c = plainText.charAt(i);
+            c += key;
+            enc += c;
+        }
+        plainText = enc;
+        return enc;
+    }
+
+    String Decryption() {
+        String dec = "";
+        for (int i = 0; i < plainText.length(); i++) {
+            char c = plainText.charAt(i);
+            c -= key;
+            dec += c;
+        }
+        plainText = dec;
+        return dec;
+    }
+}
 
 public class P_4_2 {
     public static void main(String... args) {
