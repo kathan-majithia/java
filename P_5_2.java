@@ -12,9 +12,19 @@ class Meth_outer{
     }
 }
 
+class Sta_outer{
+    static class Sta_Inner{
+        static void in_call(){
+            System.out.println("Calling from Static inner class");
+        }
+    }
+}
 
 public class P_5_2{
     public static void main(String... args) {
+        // Sta_outer.in_call();       
+        Sta_outer.Sta_Inner.in_call();
+    
         Meth_outer mo = new Meth_outer();
         mo.call();
 
