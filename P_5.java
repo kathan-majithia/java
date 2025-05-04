@@ -1,5 +1,11 @@
 import java.util.Scanner;
+class CPU {
+    double price;
 
+    CPU(double p) {
+        price = p;
+    }
+}
 public class P_5 {
     public static void main(String... args) {
 
