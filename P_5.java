@@ -22,6 +22,24 @@ class CPU {
             System.out.println("Cores : " + cores + " : Manufacturer : " + manufacturer);
         }
     }
+    protected class RAM {
+        double memory;
+        String manufacturer;
+        double clockSpeed;
+
+        RAM(double c, double ca, String m) {
+            memory = c;
+            clockSpeed = ca;
+            manufacturer = m;
+        }
+        double getClockSpeed() {
+            return clockSpeed;
+        }
+        void displayRAMDetail() {
+            System.out.println("\nRAM details...");
+            System.out.println("Memory : " + memory + " : Manufacturer : " + manufacturer);
+        }
+    }
 }
 public class P_5 {
     public static void main(String... args) {
