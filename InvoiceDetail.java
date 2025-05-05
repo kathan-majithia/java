@@ -25,7 +25,8 @@ class InvoiceDetail <N extends Number>{
         System.out.print("For integer values : ");
         System.out.println("Name : " + idi.getInvoiceName() + ", Amount : " + idi.getAmount() + ", Discount : " + idi.getDiscount());
 
-
+        System.out.print("For double values : ");
+        System.out.println("Name : " + idd.getInvoiceName() + ", Amount : " + idd.getAmount() + ", Discount : " + idd.getDiscount()); 
     }
 }
 
