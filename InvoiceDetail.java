@@ -22,6 +22,10 @@ class InvoiceDetail <N extends Number>{
         InvoiceDetail<Integer> idi = new InvoiceDetail<Integer>("Kathan",25000,15000);
         InvoiceDetail<Double> idd = new InvoiceDetail<Double>("Meet", 29000.45,2400.43);
 
+        System.out.print("For integer values : ");
+        System.out.println("Name : " + idi.getInvoiceName() + ", Amount : " + idi.getAmount() + ", Discount : " + idi.getDiscount());
+
+
     }
 }
 
