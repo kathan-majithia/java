@@ -18,6 +18,10 @@ class Book implements Comparable<Book>{
         else
             return -1;    
     }
+    public String toString(){
+        return "Book {" + "\nid = "+ id + "\n,title = " + title + "\n, author = " + 
+        author + "\n, publisher = " + publisher + "\n}\n";
+    }
 
     public static void main(String... args){
         Book b1 = new Book(12,"Maze Runner","James Dashner","Penguin");
