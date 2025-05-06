@@ -10,6 +10,14 @@ class Book implements Comparable<Book>{
         author = a;
         publisher = p;
     }
+    public int compareTo(Book b){
+        if (this.id == b.id)
+            return 0;
+        else if(this.id > b.id)
+            return 1;
+        else
+            return -1;    
+    }
 
     public static void main(String... args){
         Book b1 = new Book(12,"Maze Runner","James Dashner","Penguin");
