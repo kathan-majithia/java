@@ -3,6 +3,12 @@ class NotEnoughMoneyException extends Exception{
         super(m);
     }
 }
+class Bank{
+    int bal;
+    public Bank(int b){
+        bal = b;
+    }
+}
 public class P_7_1{
     public static void main(String... args){
         Bank b = new Bank(10000);
