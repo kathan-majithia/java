@@ -8,6 +8,11 @@ class Bank{
     public Bank(int b){
         bal = b;
     }
+    void deposit(int d){
+        System.out.println("Old balance : " + bal);
+        bal += d;
+        System.out.println("New Balance : " + bal);
+    }
 }
 public class P_7_1{
     public static void main(String... args){
