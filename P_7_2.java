@@ -11,7 +11,15 @@ public class P_7_2{
         if (n == 0)
             throw new ArithmeticException("Number of integers is zero.");
         System.out.println("Enter numbers : ");
-        
+        for(int i=0;i<n;i++){
+            String t = sc.next();
+            int ti = Integer.parseInt(t);
+            if (ti < 0)
+                throw new ArithmeticException("Value is negative.");
+ 
+            sum += ti;
+        }
+        System.out.println("Average : " + (sum / (double)n));
         }
         catch(ArithmeticException e){
             System.out.println("Caught");
