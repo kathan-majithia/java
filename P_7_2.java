@@ -16,7 +16,8 @@ public class P_7_2{
             int ti = Integer.parseInt(t);
             if (ti < 0)
                 throw new ArithmeticException("Value is negative.");
- 
+            if(ti == 0)
+                throw new ArithmeticException("Value is zero.");  
             sum += ti;
         }
         System.out.println("Average : " + (sum / (double)n));
