@@ -27,6 +27,34 @@ class Thread1 extends Thread{
         }
     }
 }
+class Thread2 implements Runnable{
+    int s,e;
+    Thread2(int s,int e){
+        this.s = s;
+        this.e = e;
+    }
+    public void run(){
+        try{
+            for(int i=s;i<=e;i++){
+                int fl = 0;
+                for(int j = 2;j < i;j++){
+                    if (i % 2 == 0){
+                        fl = 1;
+                        break;
+                    }
+                }
+                if (fl == 0)
+                    System.out.println("by runnable : " + i);
+                    Thread.sleep(0);
+            }
+        }
+        catch(InterruptedException e){
+            System.out.println(e);
+        }
+    }
+}
+
+
 
 
 public class P_8_1{
