@@ -72,6 +72,19 @@ public class TestThread {
     public static void main(String... args) {
         Queuee q = new Queuee(15);  
         
+        Thread pt = new Thread(new Producer(q));
+
+        Consumer c1 = new Consumer(q,1);
+        Consumer c2 = new Consumer(q,2);
+        
+        Thread ct1 = new Thread(c1);
+        
+        Thread ct2 = new Thread(c2);
+
+        pt.start();
+        ct1.start();
+        ct2.start();
+        
     }
 }
 
