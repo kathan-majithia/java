@@ -38,12 +38,29 @@ class Producer implements Runnable{
         }
     }
 }
+class Consumer implements Runnable{
+    Queuee q;
+    int id;
+    Consumer(Queuee q,int id){
+        this.q = q;
+        this.id = id;
+    }
+    public void consume() throws InterruptedException{
+        synchronized(q){
+
+        while(q.qu.isEmpty())
+            q.wait();
+        int v = q.qu.poll();
+        System.out.println("Consumed ("+id+") : " + v);
+
+        q.nop();
+        }
+    }
+}
 public class TestThread {
     public static void main(String... args) {
         Queuee q = new Queuee(15);  
-        
-
-        
+                
     }
 }
 
