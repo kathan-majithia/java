@@ -26,6 +26,17 @@ class Producer implements Runnable{
         q.nop();
         }
     }
+    public void run(){
+        try{
+            for(int i=0;i<q.size;i++){
+                produce(i);
+                Thread.sleep(100);
+            }
+        }
+        catch(InterruptedException e){
+            System.out.println(e);
+        }
+    }
 }
 public class TestThread {
     public static void main(String... args) {
