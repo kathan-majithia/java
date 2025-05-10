@@ -56,11 +56,22 @@ class Consumer implements Runnable{
         q.nop();
         }
     }
+    public void run(){
+        try{
+            for(int i=0;i<q.size;i++){
+                consume();
+                Thread.sleep(150);
+            }
+        }
+        catch(InterruptedException e){
+            System.out.println(e);
+        }
+    }
 }
 public class TestThread {
     public static void main(String... args) {
         Queuee q = new Queuee(15);  
-                
+        
     }
 }
 
