@@ -73,13 +73,18 @@ public class TestThread {
         Queuee q = new Queuee(15);  
         
         Thread pt = new Thread(new Producer(q));
+        pt.setPriority(Thread.NORM_PRIORITY + 1);
 
         Consumer c1 = new Consumer(q,1);
         Consumer c2 = new Consumer(q,2);
         
         Thread ct1 = new Thread(c1);
+        ct1.setPriority(Thread.NORM_PRIORITY - 1);
         
         Thread ct2 = new Thread(c2);
+        ct2.setPriority(Thread.NORM_PRIORITY - 1);
+
+        Thread.currentThread().setPriority(Thread.MAX_PRIORITY);
 
         pt.start();
         ct1.start();
