@@ -34,6 +34,15 @@ class Kathan_Al{
         for(Map.Entry m : lhm.entrySet())
                 System.out.println(m);
 
+        HashSet<String> hs = new HashSet<>();
+        hs.add("Kathan");                                                                                  
+        hs.add("Kamy");
+        hs.add("Majithia");
+        hs.add("Nisarg");
+        hs.add("Meet");
+        hs.add("Kathan");
+        hs.add("Kamy");
+        System.out.println("Content of Hash Set : " + hs);
 
     }
 }
