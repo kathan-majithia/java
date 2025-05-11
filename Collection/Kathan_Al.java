@@ -25,6 +25,16 @@ class Kathan_Al{
         System.out.println("Size : " + ll.size());
         System.out.println("Content of Linked List : " + ll);
 
+        LinkedHashMap<Integer,String> lhm = new LinkedHashMap<>();
+        lhm.put(1,"Kathan");
+        lhm.put(2,"Kamy");
+        lhm.put(3,"Majithia");
+        lhm.put(4,"Meet");
+        System.out.println("Content of LinkedHashMap : ");
+        for(Map.Entry m : lhm.entrySet())
+                System.out.println(m);
+
+
     }
 }
 
