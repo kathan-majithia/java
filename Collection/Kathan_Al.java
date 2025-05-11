@@ -44,6 +44,13 @@ class Kathan_Al{
         hs.add("Kamy");
         System.out.println("Content of Hash Set : " + hs);
 
+        TreeMap<Object,Object> ts = new TreeMap<>();
+        ts.put(10,"Kathan");
+        ts.put(20,"Kamy");
+        ts.put(30,"Majithia");
+        ts.put(40,"Meet");
+
+        System.out.println("Content of tree set : " + ts);
     }
 }
 
