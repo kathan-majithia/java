@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Kathan_sort {
+public class CRUD {
     public static void main(String... args) {
         ArrayList<Integer> al = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
@@ -15,6 +15,11 @@ public class Kathan_sort {
                 case 2:System.out.println("Enter index and value");
                         al.set(sc.nextInt(), sc.nextInt());
                         break;
+                case 3:System.out.println("Enter index to delete : ");
+                        al.remove(sc.nextInt());
+                default:
+                    break;
+            }
         }
     }
 }
