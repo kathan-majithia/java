@@ -12,6 +12,9 @@ public class Kathan_sort {
                 case 1:System.out.println("Enter value : ");
                         al.add(sc.nextInt());
                     break;
+                case 2:System.out.println("Enter index and value");
+                        al.set(sc.nextInt(), sc.nextInt());
+                        break;
         }
     }
 }
