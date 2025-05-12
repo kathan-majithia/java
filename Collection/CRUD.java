@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.ListIterator;
 import java.util.Scanner;
 
 public class CRUD {
@@ -19,6 +20,11 @@ public class CRUD {
                         al.remove(sc.nextInt());
                 default:
                     break;
+            }
+            ListIterator<Integer> lit = al.listIterator();
+            System.out.println("Content : ");
+            while(lit.hasNext()){
+                System.out.println(" " + lit.next());
             }
         }
     }
