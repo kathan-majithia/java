@@ -34,5 +34,16 @@ public class col_sort {
         ll.sort(null);
 
         System.out.print("After sorted : " + ll);
+
+        TreeSet<Integer> ts = new TreeSet<>();
+        ts.add(5);
+        ts.add(2);
+        ts.add(1);
+        ts.add(6);
+        ts.add(8);
+
+        System.out.print("After sorted : " + ts);
+
+
     }
 }
