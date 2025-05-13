@@ -21,5 +21,18 @@ public class col_sort {
         al.sort(null);
 
         System.out.print("After sorted : " + al);
+
+        LinkedList<Integer> ll = new LinkedList<>();
+        ll.add(5);
+        ll.add(2);
+        ll.add(1);
+        ll.add(6);
+        ll.add(8);
+
+        System.out.print("Before sorted : " + ll);
+
+        ll.sort(null);
+
+        System.out.print("After sorted : " + ll);
     }
 }
