@@ -8,6 +8,9 @@ public class P_10_1 {
         Scanner fd = new Scanner(fr);
 
         String w = "done";
+        while(fd.hasNextLine()){
+            String s[] = fd.nextLine().split(" ");   
+        }
 
         System.out.println(w + " has occured " + co + " times.");
     }
