@@ -9,7 +9,11 @@ public class P_10_1 {
 
         String w = "done";
         while(fd.hasNextLine()){
-            String s[] = fd.nextLine().split(" ");   
+            String s[] = fd.nextLine().split(" ");
+            for(int i=0;i<s.length;i++){
+                if (s[i].equals(w))
+                    co++;
+            }
         }
 
         System.out.println(w + " has occured " + co + " times.");
