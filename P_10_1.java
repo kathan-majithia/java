@@ -16,6 +16,9 @@ public class P_10_1 {
             }
         }
 
+        fd.close();
+        fr.close();
+
         System.out.println(w + " has occured " + co + " times.");
     }
 }
