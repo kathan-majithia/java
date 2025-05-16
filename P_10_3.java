@@ -7,7 +7,11 @@ public class P_10_3 {
             System.out.println("Dir : " + f.getPath());
             String li[] = f.list();
             System.out.println("File names : ");
-        }
+            for(int i=0;i<li.length;i++){
+                File l = new File(f.getPath() + "//" + li[i]);
+                if(l.isFile())
+                    System.out.println(li[i]);
+            }
         }else{
             System.out.println("It is not a directory");
         }
